@@ -1,5 +1,5 @@
-# SDM
-SDM (Stackelberg Driver Model) ([https://arxiv.org/abs/2309.14235](https://arxiv.org/abs/2309.14235)) is a novel approach that aligns with the hierarchical nature of interactions between autonomous vehicle (AV) and background vehicles (BVs), facilitating AV performance improvement in a leader-follower order of play. We empirically demonstrate that AV and BV agents can both achieve better performance during the game with SDM. Essentially, SDM outperforms those competing baselines with simple adversarial training paradigms, non-game modeling and other game modeling approaches, especially in higher dimensional scenarios.
+# STTP
+STTP (Stackelberg Training-Testing Paradigm) is a novel approach that aligns with the hierarchical nature of interactions between autonomous vehicle (AV) policy training and risky scenario generation, facilitating AV performance improvement in a leader-follower order of play. We empirically demonstrate that AV and background vehicle (BV) agents can both achieve better performance in STTP. Essentially, STTP outperforms those competing baselines with simple adversarial training paradigms, non-game modeling and other game modeling approaches, especially in higher dimensional scenarios.
 ![SDM](SDM.png)
 ## Installation and Setups
 Before getting started, first you should install SUMO properly following the [sumo documentation](https://sumo.dlr.de/docs/Installing/index.html).
@@ -8,7 +8,7 @@ Then, to install the dependencies, run the command:
 
 ```bash
 conda env create -f environment.yml
-conda activate SDM
+conda activate STTP
 pip install -e .
 ```
 Then, download our pre-processed dataset from [here](https://cloud.tsinghua.edu.cn/f/476b8b8824944f4b89dd/?dl=1), and unzip it using
@@ -18,15 +18,15 @@ unzip dataset.zip
 ```
 
 ## Run Experiments
-We run experiments on SDM, Non-Game, SimGM, NSD and I-SDM. To begin with, enter the folder `Scripts`:
+We run experiments on STTP, Non-Game, SimGM, NSD and I-STTP. To begin with, enter the folder `Scripts`:
 
 ```bash
 cd Scripts
 ```
 
-Then you can run SDM and baselines using following example commands.
+Then you can run STTP and baselines using following example commands.
 
-### Train AV and BV using SDM
+### Train AV and BV using STTP
 
 ```bash
 python main_spg_ac_inv.py --r_ego stackelberg --r_adv stackelberg --is_save True --save_model True --adv_policy sumo --num_agents 5
@@ -60,16 +60,6 @@ and using `--used_wandb True` to turn on the online syncronization.
 ## Acknowledgement
 Our codebase structure mainly derives from [(Re)2H2O](https://github.com/Kun-k/Re_2_H2O). Many thanks to them!
 
-## Citation
-If you are using SDM framework or code for your project development, please cite the following paper:
 
-```
-@article{niu2023stackelberg,
-  title={Stackelberg Driver Model for Continual Policy Improvement in Scenario-Based Closed-Loop Autonomous Driving},
-  author={Niu, Haoyi and Chen, Qimao and Li, Yingyue and Zhang, Yi and Hu, Jianming},
-  journal={NeurIPS Machine Learning for Autonomous Driving Symposium},
-  year={2023}
-}
-```
 
 
