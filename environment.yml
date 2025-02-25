@@ -1,4 +1,4 @@
-name: SDM
+name: STTP
 channels:
   - defaults
 dependencies:
