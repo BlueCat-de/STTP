@@ -1,6 +1,6 @@
 # STTP
 STTP (Stackelberg Training-Testing Paradigm) is a novel approach that aligns with the hierarchical nature of interactions between autonomous vehicle (AV) policy training and risky scenario generation, facilitating AV performance improvement in a leader-follower order of play. We empirically demonstrate that AV and background vehicle (BV) agents can both achieve better performance in STTP. Essentially, STTP outperforms those competing baselines with simple adversarial training paradigms, non-game modeling and other game modeling approaches, especially in higher dimensional scenarios.
-![SDM](SDM.png)
+![STTP](STTP.png)
 ## Installation and Setups
 Before getting started, first you should install SUMO properly following the [sumo documentation](https://sumo.dlr.de/docs/Installing/index.html).
 
