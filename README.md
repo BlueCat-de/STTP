@@ -1,3 +1,5 @@
+
+
 # STTP
 STTP (Stackelberg Training-Testing Paradigm) is a novel approach that aligns with the hierarchical nature of interactions between autonomous vehicle (AV) policy training and risky scenario generation, facilitating AV performance improvement in a leader-follower order of play. We empirically demonstrate that AV and background vehicle (BV) agents can both achieve better performance in STTP. Essentially, STTP outperforms those competing baselines with simple adversarial training paradigms, non-game modeling and other game modeling approaches, especially in higher dimensional scenarios.
 ![STTP](STTP.png)
@@ -55,11 +57,7 @@ You can resort to [wandb](https://wandb.ai/site) to login your personal account 
 export WANDB_API_KEY=YOUR_WANDB_API_KEY
 ```
 
-and using `--used_wandb True` to turn on the online syncronization.
+and using `--used_wandb True` to turn on the online synchronization.
 
 ## Acknowledgement
 Our codebase structure mainly derives from [(Re)2H2O](https://github.com/Kun-k/Re_2_H2O). Many thanks to them!
-
-
-
-
